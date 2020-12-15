@@ -152,7 +152,7 @@ public class JTMessageDecoder {
     protected ByteBuf slice(ByteBuf byteBuf, int index, int length) {
         byte second = byteBuf.getByte(index + length - 1);
         if (second == 0x02)
-            byteBuf.setByte(index + length - 2, 0x7e);
+            byteBuf.setByte(index + length - 2, 0x28);
 
         // 0x01 不做处理 p47
         // if (second == 0x01) {

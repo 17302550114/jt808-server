@@ -29,7 +29,7 @@ public class ClientTest {
                 .setIp("127.0.0.1")
                 .setPort(7611)
                 .setMaxFrameLength(1024)
-                .setDelimiters(new byte[]{0x7e})
+                .setDelimiters(new byte[]{0x28})
                 .setDecoder(messageAdapter)
                 .setEncoder(messageAdapter)
                 .setHandlerMapping(new HandlerMapping("org.yzh.netty"))

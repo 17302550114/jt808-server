@@ -72,7 +72,7 @@ public class JTMessageEncoder {
         int low = source.readerIndex();
         int high = source.writerIndex();
 
-        int mark = source.forEachByte(low, high, value -> !(value == 0x7d || value == 0x7e));
+        int mark = source.forEachByte(low, high, value -> !(value == 0x7d || value == 0x28));
 
         if (mark == -1)
             return source;
@@ -88,7 +88,7 @@ public class JTMessageEncoder {
             bufList.add(slice[1]);
             low += len;
 
-            mark = source.forEachByte(low, high - low, value -> !(value == 0x7d || value == 0x7e));
+            mark = source.forEachByte(low, high - low, value -> !(value == 0x7d || value == 0x28));
         } while (mark > 0);
 
         bufList.add(source.slice(low, high - low));

@@ -40,7 +40,7 @@ public class JSATLConfig implements InitializingBean, DisposableBean {
                 .setPort(port)
                 .setMaxFrameLength(2 + 21 + 1023 + 2)
                 .setLengthField(new LengthField(DataFramePrefix, 1024 * 65, 58, 4))
-                .setDelimiters(new Delimiter(new byte[]{0x7e}))
+                .setDelimiters(new Delimiter(new byte[]{0x28}))
                 .setDecoder(alarmFileMessageAdapter())
                 .setEncoder(alarmFileMessageAdapter())
                 .setSessionManager(alarmFileSessionManager())

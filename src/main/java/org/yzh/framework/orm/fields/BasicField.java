@@ -17,8 +17,8 @@ import java.lang.reflect.Method;
 public abstract class BasicField<T> implements Comparable<BasicField> {
     protected static Logger log = LoggerFactory.getLogger(BasicField.class.getSimpleName());
 
-    protected final int index;
-    protected final int length;
+    public final int index;
+    public final int length;
     protected final String desc;
     protected final Method readMethod;
     protected final Method writeMethod;

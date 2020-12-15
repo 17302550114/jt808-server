@@ -37,7 +37,7 @@ public class JTConfig implements InitializingBean, DisposableBean {
         NettyConfig jtConfig = NettyConfig.custom()
                 .setPort(port)
                 .setMaxFrameLength(2 + 21 + 1023 + 2)
-                .setDelimiters(new Delimiter(new byte[]{0x7e}))
+                .setDelimiters(new Delimiter(new byte[]{0x28}))
                 .setDecoder(messageAdapter())
                 .setEncoder(messageAdapter())
                 .setSessionManager(sessionManager())
